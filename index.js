@@ -1,84 +1,79 @@
-console.log('Im Working. Im JS. Im Beautiful. Im worth it');
+// 2.1 
+// First JS Function
+// console.log(immeInfo, console);
+// 브라우저가 가진 자바스크립트를 object에 넣을 수 있다. 
+// console : built-in function. console은 내장함수이다. 
+// function : 어떤걸 수행하려는 한 부분. 한조각 코드 원하는 만큼 사용할 수 있다.
 
-// 1.5
-// 모든 언어 컨셉은 비슷하다. 
-// Function / Variable / Conditional Option / Event / Class / Object / Arrays 를 배우는 것 
+// 자바스크립트에서 함수만들기
+function sayHello(name, age){
+  console.log("hello!", name, " you have", age, " year of age.");
+}
 
-// 1.6 
-// Variable 변경되거나 변경될 수 있는 것.
-// 모든 expression instruntion은 한 라인에 있어야 한다. 
-// Create-Initialize-Use
-// let : 변수를 생성하거나 초기화 할때 사용한다. 필요할 떄만 let으로 변수 선언하기. 
-let a = 221;
-let b = a - 5;
-console.log(b); 
+sayHello("Imme", 33); //("name") = arguments : argument는 변수와 같은 것. 변수를 저장하여 함수로 가지고 가는 것. 함수에게 외부에 있는 데이터를 준다.  
 
-// 1.7 
-// const : 변수 선언할 때 기본 사용하기. 상수 변하지 않는 값으로 변수 생성, 초기화 할 때 사용한다. 
-// (let 은 문제가 발생했을 때 생성값으로 바뀌기 때문에 무슨 일이 일어났는지 알 수 없게 된다.) 
-// 항상 에러를 읽으려고 시도할 것. 대부분의 정보는 에러에 있다.
-const c = 221;
-let d = c - 10;
-// a = 4 ;  Error 발생 
-console.log(d); 
-
-// 1.8
-// Kind of DataType 
-// // 라인 주석 do not read. do not run it. 
-// /**/ 블럭 주석 
-
-// 일반적 변수 선언은 const(상수) 로 하기 - 특이한 경우 let(변수) 선언하기
-// String
-const what = "imme";
-console.log(what);
-
-// Boolean
-const waf = false;
-
-//Number
-const wat = 444;
-console.log(wat);
-
-// Float 
-const wata = 55.1;
-
-// 1.9 
-// Organizing Date with Arrays.
-// Array : 데이터를 저장하는 곳. 리스트 같이.  
- const mon = "Mon";
- const tue = "Tue";
- const wed = "Wed";
- const thu = "Thu";
- const fri = "Fri";
- 
- const dayOfWeek = ["Mon", "Tue","Wed", "Thu", "Fri", true];
- 
- console.log(dayOfWeek[2]);
-
- // 1.10
- // Organizing Date with Object.
- // Object : Arrays와 다른 점은 각 value에 이름을 준다는 것.  
-const immeInfo = {
-    name: "imme",
-    age: 33,
-    gender: "female",
-    isBeautiful: true,
-    favMovies: ["Along the gods", "Inception", "Monster"],
-    favFood: [
-      {
-        name: "Yogurt",
-        fatty: false
-      },
-      {
-        name: "fried chicken",
-        fatty: true
-      }
-    ]
-  }
+function sayHi(name, age){
+    return `Hello ${name} you are ${age} years old`;
+}
   
-// Object Data Edit
-immeInfo.gender ="Male";
+// 2.1.1 
+const greetImme = sayHi("Imme", 33);
+// console.log(greetImme)
 
-console.log(immeInfo.gender);
+// 2.2 
+// JS DOM Function
+// HTML Document는 Javascript가 된다. 
+//console.log(document); 
+const titleID = document.getElementById("title");
+console.log(titleID)
+
+// DOM : Document Object Module. 자바스크립트는 HTML에 있는 모든 태그를 가지고 온다. 그리고 객체로 바꾼다.
+// 객체를 .으로 찍었을 때 나온다. Document의 모든 건 다 객체가 된다. (=모든 HTML은 객체가 된다.)
+// 객체가 많은 키를 갖는다는 것을 알아야 접근해 수정할 수 있다. 
+// titleID.innerHTML = "Hi! From JS";
+
+// 2.3 
+// Modifying the DOM with JS
+// 자바스크립트 객체 표기법
+
+// 우리가 배울 모든 함수들은 모든 객체들의 함수들 DOM(Document Object Model)형태로 변경 가능하다. 
+// console.dir()로 이벤트를 찾고 html을 조종할 수 있다. 
+console.dir(document); 
+
+// DOM 객체로 접근하여 JS로 수정할수 있고, HTML을 바꿀 수 있다. 
+// (class 추가, 애니메이션 변경, toggle 적용, click 감지 etc)
+titleID.style.color = "red";
+document.titleID = "I own you now";
 
 
+// 2.4
+// Event and Event handlers
+// JS가 만들어진 이유는?
+// - 단지 HTML 과 CSS 를 바꾸는데만 사용하지 않는다. 
+// JS는 이벤트(웹사이트에서 반응하는 것들)에 반응하기 위해서 만들어졌다! 
+// (click, resize, submit, input, change, load, before, closing, printing)
+
+function handleResize(event) {
+  // 이벤트를 다를 함수를 만들 때마다. JS는 자동으로 함수를 객체에 붙인다. 
+  // = event 발생할 때마다, 이벤트 객체가 호출된다. (form, click link 할 때 유용함)
+  console.log(event);
+}
+
+window.addEventListener("resize", handleResize(event));
+
+// 2.5
+// if, else, and, or 
+// === Check Condition
+if(10 === 5){
+  console.log("hi");
+} else {
+  console.log("ho");
+}
+
+// && true and true
+// || true or true
+if (20 > 5 && "immes" == "immes") {
+  console.log("yes");
+} else {
+  console.log("no");
+}
