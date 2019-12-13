@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+div {
+    border: 0.5px solid black;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    margin: 2px;
+}
+
+.js-box {
+    width: 400px;
+    text-align: center;
+}
+
+.js-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.js-flex{
+    flex: 1;
+    background-color: #363439;
+}
+
+.js-flex-3{
+    flex: 3 0 10px;
+} 
+
+.js-flex-2{
+    flex: 2 0 5px;
+    background-color: #363439;
+}
+
+.js-reset{
+    background-color: #a7aab1;
+}
+.js-cal{
+    background-color: darkorange;
+}
