@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="range.css" />
+</head>
+
+<body>
+    <h1>Random Number Game 👌</h1>
+    <div class="js-range">
+        <h3>🧩Generate a number between 0 and <span class="js-maxNum"></span></h3>
+        <input type="range" id="jsRange" min="1" max="100" value="50" step="1" >
+    </div>
+    <div class="js-selectNumber">
+        <span>Guess the number : <input type="number" /><button>play!</button></span>
+    </div>
+    <h4 class="js-selectResult"></h4>
+    <h3 class="js-gameResult"></h3>
+    <script src="range.js"></script>
+</body>
+
+</html>
