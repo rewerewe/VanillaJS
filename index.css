@@ -46,10 +46,6 @@ ul li span {
     display: inline;
 }
 
-ul li span::after {
-    content: url(../images/clear.png);
-}
-
 button {
     padding: 0;
     border: 0;
