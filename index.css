@@ -63,11 +63,13 @@ div ul li span button {
     flex-direction: row;
 }  */
 
-.app-top {
-    margin: 0 0 auto 0;
+.app-top-weather {
+    margin: 0 0 0 95%;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px gray;
 }
 
-.app-body {
+.app-body-todo {
     margin-top: 17%;
 }
 
