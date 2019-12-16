@@ -1,7 +1,7 @@
-// 3.3 Saving the serName
+// 3.3 Saving the userName
 // localStorage
 const form = document.querySelector(".js-form"),
-    input = form.querySelector("input"),
+    username = form.querySelector("#username"),
     greeting = document.querySelector(".js-greetings");
 
 // USER_LocalStoage,SHOWING_ClassName 
@@ -12,36 +12,33 @@ function saveName(text) {
     localStorage.setItem(USER_LS, text);
 }
 
-function handleSubmit(event){
+function handleFormSubmit(event) {
     event.preventDefault();
-    const currentValue = input.value;
+    const currentValue = username.value;
     paintGreeting(currentValue);
     saveName(currentValue);
 }
 
-function askForName(){
+function askForName() {
     form.classList.add(SHOWING_CN);
-    form.addEventListener("submit", handleSubmit);
+    form.addEventListener("submit", handleFormSubmit);
 }
 
-function paintGreeting(text){
+function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `Have a good day, ${text}.`; // 'Hello ' + text;
+    toDoForm.classList.add(SHOWING_CN);
+    toDoForm.addEventListener("submit", handleToDoFormSubmit);
+    setFocus();
 }
 
-function loadName(){
+function loadName() {
     const currentUser = localStorage.getItem(USER_LS)
-    
-    if(currentUser === null){
+
+    if (currentUser === null) {
         askForName();
     } else {
         paintGreeting(currentUser);
     }
 }
-
-function init(){
-    loadName();
-}
-
-init();

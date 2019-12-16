@@ -14,13 +14,5 @@ function getTime(){
 
     // 미니 if
     clockTitle.innerText = `${hours < 10 ? `0${hours}`: hours}:${minutes < 10 ? `0${minutes}`: minutes}:${seconds < 10 ? `0${seconds}`: seconds}`;
-
-}  
-
-function init() {
-    // Always divided and conquer!
-    getTime();
-    setInterval(getTime, 1000);
+    loadName();
 }
-
-init();

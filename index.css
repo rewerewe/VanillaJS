@@ -67,7 +67,9 @@ div ul li span button {
 }  */
 
 .app-top-weather {
-    margin: 0 0 0 95%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 .js-temperature {
@@ -127,13 +129,17 @@ div ul li span button {
     display: none;
 }
 
+.toDoForm,
+.todoList {
+    display: none;
+}
+
 .showing {
     display: block;
 }
 
-
 @keyframes fadeIn{
-    from{
+    from {
         opacity: 0;
     } 
     to {

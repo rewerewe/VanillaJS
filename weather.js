@@ -53,9 +53,10 @@ function loadCoords(){
         getWeather(parseCoords.latitude, parseCoords.longitude);
     }
 }
-
+/* 
 function init(){
     loadCoords();
 }
 
 init();
+*/
