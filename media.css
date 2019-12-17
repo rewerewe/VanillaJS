@@ -61,16 +61,9 @@
         outline: 0;
         color: #fff;
     }
-    /* 
-    div ul li span, 
-    div ul li span button {
-        flex-direction: row;
-    }  */
-    
+
     .app-top-weather {
-        position: absolute;
-        top: 15px;
-        right: 15px;
+        margin: 0 0 0 95%;
     }
     
     .js-temperature {
@@ -112,7 +105,7 @@
     
     .sty-toDoList {
         flex-direction: row;
-        font-size: 170%;
+        font-size: 250%;
         left: calc(50% - 300px/2);
         text-align: center;
     }
