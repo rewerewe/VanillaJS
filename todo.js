@@ -60,6 +60,7 @@ function loadTodoForm() {
 }
  */
 function loadToDos() {
+  // userName 없다면 toDolist 출력되지 않음.
   if (localStorage.getItem(USER_LS) === null) {
     return;
   }
