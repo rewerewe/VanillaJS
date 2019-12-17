@@ -130,7 +130,7 @@ button:focus {
 }
 
 .sty-intro span {
-    font-size: 300%;
+    font-size: 200%;
 }
 
 .sty-greeting { 
@@ -181,7 +181,7 @@ button:focus {
     }
 
     .app-body-todo {
-        margin-top: 13.5%;
+        margin-top: 11.5%;
     }
 
     .js-clock {
@@ -214,5 +214,6 @@ button:focus {
         font-size: 170%;
         left: calc(50% - 300px/2);
         text-align: center;
+        padding-top: 5px;
     }
 }
