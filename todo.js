@@ -29,10 +29,10 @@ function paintToDo(text) {
   const newId = toDos.length + 1;
   const writtenDate = clockTitle.textContent;
 
-  delBtn.innerText = "❌";
+  delBtn.innerText = " "+ "❌";
   delBtn.addEventListener("click", deleteToDo);
   textSpan.innerText = text;
-  dateSpan.innerText = ` | ${writtenDate}`;
+  dateSpan.innerText = ` | ${writtenDate}  `;
   li.appendChild(textSpan);
   li.appendChild(dateSpan);
   li.appendChild(delBtn);
